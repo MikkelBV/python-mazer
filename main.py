@@ -122,4 +122,8 @@ def main(image_path):
     cv2.destroyAllWindows()
 
 if __name__ == '__main__':
-    main('mazes/bigbigmaze.png')
+    import sys
+    if len(sys.argv) == 2:
+        main(sys.argv[1])
+    else:
+        main('mazes/bigbigmaze.png')
